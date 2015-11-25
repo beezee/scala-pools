@@ -14,7 +14,7 @@ import scala.concurrent.ExecutionContext.Implicits.global
 
 case class Foo(label: String)
 
-// Create a pool of max 20 Foo instances
+// Create a pool of max 200 Foo instances
 val p = { () => Foo(Random.nextString(4)) }.pool(200)
 
 // Print the label of a Foo from the pool, returning to the pool when done
